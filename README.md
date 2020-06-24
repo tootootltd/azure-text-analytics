@@ -1,8 +1,8 @@
 # PHP Azure Text Analytics
 	
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tootootltd/azure-text-analytics.svg?style=flat-square)](https://packagist.org/packages/tootootltd/azure-text-analytics)
-[![Build Status](https://img.shields.io/travis/tootootltd/azure-text-analytics/master.svg?style=flat-square)](https://travis-ci.org/tootootltd/azure-text-analytics)
-	
+[![Build Status](https://travis-ci.org/tootootltd/azure-text-analytics.svg?branch=master)](https://travis-ci.org/tootootltd/azure-text-analytics)
+
 A very simple wrapper around version 3.0 of Azure Cognitive Services' Text Analytics API: https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/
 	
 ## Installation
