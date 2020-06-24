@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'endpoint' => env('AZURE_ENDPOINT'),
+    'endpoint' => env('AZURE_ENDPOINT'),
 
-	'key' => env('AZURE_KEY')
+    'key' => env('AZURE_KEY'),
 ];

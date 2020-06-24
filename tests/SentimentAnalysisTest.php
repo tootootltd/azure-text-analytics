@@ -5,26 +5,24 @@ namespace Tootootltd\AzureTextAnalytics\Tests;
 use Faker\Factory;
 use Illuminate\Support\Facades\Http;
 use Tootootltd\AzureTextAnalytics\AzureTextAnalytics;
-use Tootootltd\AzureTextAnalytics\AzureTextAnalyticsServiceProvider;
-use Tootootltd\AzureTextAnalytics\Tests\TestCase;
 
 class SentimentAnalysisTest extends TestCase
 {
     /** @test */
     public function it_works_with_a_multi_dimensional_array()
     {
-    	$faker = Factory::create();
+        $faker = Factory::create();
 
-    	$data = [
-    		[
-    			'id' => 1,
-    			'text' => $faker->realText
-    		],
+        $data = [
+            [
+                'id' => 1,
+                'text' => $faker->realText,
+            ],
             [
                 'id' => 2,
-                'text' => $faker->realText
-            ]
-    	];
+                'text' => $faker->realText,
+            ],
+        ];
 
         $http = Http::fake([
             '*' => Http::response($this->successfulResponse(), 200),
@@ -49,7 +47,7 @@ class SentimentAnalysisTest extends TestCase
 
         $data = [
             'id' => 3,
-            'text' => $faker->realText
+            'text' => $faker->realText,
         ];
 
         $http = Http::fake([
