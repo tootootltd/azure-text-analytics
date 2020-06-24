@@ -18,7 +18,7 @@ Publish the config file and put your Azure Cognitive Services endpoint and key i
 ```bash
 php artisan vendor:publish --provider="Tootootltd\AzureTextAnalytics\AzureTextAnalyticsServiceProvider"
 ```
-	
+
 ## Requirements
 
 1. An Azure Cognitive Services endpoint and key.
@@ -79,7 +79,7 @@ This package will do a bit of validation on your text before hitting Azure's API
 2. Ensuring that the required fields are present when passing an array (`id` and `text` at time of writing). More info on these can be found on [Azure's documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api#json-schema-definition).
 	
 	
-###Methods:
+### Methods:
 	
 **Sentiment Analysis** - View [example response](https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis?tabs=version-3#view-the-results)
 	
