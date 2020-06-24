@@ -4,24 +4,22 @@ namespace Tootootltd\AzureTextAnalytics\Tests;
 
 use Faker\Factory;
 use Tootootltd\AzureTextAnalytics\AzureTextAnalytics;
-use Tootootltd\AzureTextAnalytics\AzureTextAnalyticsServiceProvider;
 use Tootootltd\AzureTextAnalytics\Exceptions\ExceededApiLimit;
 use Tootootltd\AzureTextAnalytics\Exceptions\InvalidDataStructure;
-use Tootootltd\AzureTextAnalytics\Tests\TestCase;
 
 class ValidationTest extends TestCase
 {
     /** @test */
     public function it_fails_validation_when_any_required_fields_are_missing()
     {
-    	$data = [
-    		[
-    			'id' => 1,
-    			// 'text' is missing
-    		]
-    	];
+        $data = [
+            [
+                'id' => 1,
+                // 'text' is missing
+            ],
+        ];
 
-    	$this->expectException(InvalidDataStructure::class);
+        $this->expectException(InvalidDataStructure::class);
 
         $analyse = new AzureTextAnalytics($data);
     }
@@ -32,16 +30,16 @@ class ValidationTest extends TestCase
         $data = [
             [
                 'id' => 1,
-                'text' => 'example'
+                'text' => 'example',
             ],
             [
                 'id' => 2,
-                'text' => 'example 2'
+                'text' => 'example 2',
             ],
             'text' => 'Example 3',
             [
                 'id' => 4,
-                'text' => 'example 4'
+                'text' => 'example 4',
             ],
         ];
 
@@ -53,16 +51,16 @@ class ValidationTest extends TestCase
     /** @test */
     public function it_fails_validation_if_any_document_is_longer_than_the_document_limit()
     {
-    	$faker = Factory::create();
+        $faker = Factory::create();
 
-    	$data = [
-    		[
-    			'id' => 1,
-    			'text' => $faker->text(6000)
-    		]
-    	];
+        $data = [
+            [
+                'id' => 1,
+                'text' => $faker->text(6000),
+            ],
+        ];
 
-    	$this->expectException(ExceededApiLimit::class);
+        $this->expectException(ExceededApiLimit::class);
 
         $analyse = new AzureTextAnalytics($data);
     }
@@ -70,17 +68,18 @@ class ValidationTest extends TestCase
     /** @test */
     public function it_fails_validation_when_document_count_is_exceeded()
     {
-    	$faker = Factory::create();
+        $faker = Factory::create();
 
-    	$data = [];
+        $data = [];
 
-    	for ($i = 1; $i <= 1001; $i++)
-    	$data[] = [
-			'id' => $i,
-			'text' => $faker->sentence
-    	];
+        for ($i = 1; $i <= 1001; $i++) {
+            $data[] = [
+                'id' => $i,
+                'text' => $faker->sentence,
+            ];
+        }
 
-    	$this->expectException(ExceededApiLimit::class);
+        $this->expectException(ExceededApiLimit::class);
 
         $analyse = new AzureTextAnalytics($data);
     }
