@@ -19,7 +19,11 @@ Publish the config file and put your Azure Cognitive Services endpoint and key i
 php artisan vendor:publish --provider="Tootootltd\AzureTextAnalytics\AzureTextAnalyticsServiceProvider"
 ```
 	
-	
+## Requirements
+
+1. An Azure Cognitive Services endpoint and key.
+2. PHP 7.4
+
 ## Usage
 	
 This package supports all 5 Text Analytics endpoints and each return the full raw response body.
