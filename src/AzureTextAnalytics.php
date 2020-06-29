@@ -72,7 +72,8 @@ class AzureTextAnalytics
     	$this->setPath($path);
 
     	return Http::withHeaders($this->headers)
-    				 	 ->post($this->endpoint . $this->path, $this->requestBody);
+    				 	 ->post($this->endpoint . $this->path, $this->requestBody)
+                         ->json();
     }
 
     private function setPath(string $path) : self
