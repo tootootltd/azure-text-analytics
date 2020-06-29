@@ -12,13 +12,13 @@ class TestCase extends Orchestra
         return [AzureTextAnalyticsServiceProvider::class];
     }
 
-    protected function setUp() : void
+    protected function setUp(): void
     {
-    	parent::setUp();
+        parent::setUp();
 
-    	config([
-    		'azure-text-analytics.endpoint' => 'https://example.com',
-    		'azure-text-analytics.key' => 'example'
-    	]);
+        config([
+            'azure-text-analytics.endpoint' => 'https://example.com',
+            'azure-text-analytics.key' => 'example',
+        ]);
     }
 }
