@@ -10,7 +10,7 @@ class AzureTextAnalytics
 {
     const API_VERSION = 'v3.0';
 
-    // https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/overview#data-limits
+    // https://learn.microsoft.com/en-gb/azure/cognitive-services/language-service/concepts/data-limits#maximum-documents-per-request
     const DOCUMENT_LENGTH_LIMIT = 5120;
     const DOCUMENT_LIMIT = 1000;
 
