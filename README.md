@@ -2,7 +2,7 @@
 	
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tootootltd/azure-text-analytics.svg?style=flat-square)](https://packagist.org/packages/tootootltd/azure-text-analytics)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![run-tests](https://github.com/tootootltd/azure-text-analytics/workflows/run-tests/badge.svg)](https://github.com/spatie/browsershot/actions)
+[![run-tests](https://github.com/tootootltd/azure-text-analytics/workflows/run-tests/badge.svg)](https://github.com/tootootltd/azure-text-analytics/actions)
 
 A very simple wrapper around version 3.0 of Azure Cognitive Services' Text Analytics API: https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/
 	
