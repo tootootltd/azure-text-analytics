@@ -2,9 +2,7 @@
 	
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tootootltd/azure-text-analytics.svg?style=flat-square)](https://packagist.org/packages/tootootltd/azure-text-analytics)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Quality Score](https://img.shields.io/scrutinizer/quality/g/tootootltd/azure-text-analytics)](https://scrutinizer-ci.com/g/tootootltd/azure-text-analytics)
-[![StyleCI](https://styleci.io/repos/274707206/shield)](https://styleci.io/repos/274707206)
-[![Build Status](https://travis-ci.org/tootootltd/azure-text-analytics.svg?branch=master)](https://travis-ci.org/tootootltd/azure-text-analytics)
+[![run-tests](https://github.com/spatie/browsershot/workflows/run-tests/badge.svg)](https://github.com/spatie/browsershot/actions)
 
 A very simple wrapper around version 3.0 of Azure Cognitive Services' Text Analytics API: https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/
 	
@@ -78,8 +76,8 @@ $text = new AzureTextAnalytics($myText)
 	
 This package will do a bit of validation on your text before hitting Azure's API, such as;
 	
-1. Checking the length of each `document` (string of text) and the number of `documents` per request to ensure they aren't above the Azure API's limits (`5,120` characters and `1,000` documents at time of writing respectively). In both these instances an `ExceededApiLimit` exception will be thrown. More info on these limits can be found on [Azure's documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/overview#data-limits).
-2. Ensuring that the required fields are present when passing an array (`id` and `text` at time of writing). More info on these can be found on [Azure's documentation](https://docs.microsoft.com/en-gb/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-call-api#json-schema-definition).
+1. Checking the length of each `document` (string of text) and the number of `documents` per request to ensure they aren't above the Azure API's limits (`5,120` characters and `1,000` documents at time of writing respectively). In both these instances an `ExceededApiLimit` exception will be thrown. More info on these limits can be found on [Azure's documentation](https://learn.microsoft.com/en-gb/azure/cognitive-services/language-service/concepts/data-limits#maximum-documents-per-request).
+2. Ensuring that the required fields are present when passing an array (`id` and `text` at time of writing). More info on these can be found on [Azure's documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/).
 	
 	
 ### Methods:
